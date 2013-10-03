@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Sphere calculations</title>
+</head>
+<body>
+<div >
+    <b>Radius of Sphere</b>
+    <input type="number" ng-model="radius" value=0>
+    <br/>
+    <br/>
+    <b>Volume:</b> {{ (4*3.141*radius*radius*radius)/3 | number:3}} <br/>
+    <b>Surface area:</b> {{ (4*3.141*radius*radius) | number:3}} <br/>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+
+</body>
+</html>

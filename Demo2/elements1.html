@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Elements</title>
+    <script type="text/javascript" src="../js/chemistry.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+</head>
+<body>
+    <b>Periodic Elements</b>
+    <div id="elements1" ng-controller="chemCtrl" >{{periodic.elements.length}}
+        <ul>
+            <li ng-repeat="element in periodic.elements">
+                {{element.name}}
+            </li>
+        </ul>
+    </div>
+End
+</body>
+<script>
+    function chemCtrl($scope) {
+        $scope.periodic = perioicData;
+    }
+</script>
+</html>

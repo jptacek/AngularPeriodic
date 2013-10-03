@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Temperature Conversion</title>
+</head>
+<body>
+<div >
+    <b>Temperature (&degF)</b>
+    <input type="number" ng-model="tempF" value=0>
+    <br/>
+    <br/>
+    <b>Celcius:</b> {{ ((5/9)*(tempF-32)) |number:2 }} &degC<br/>
+    <b>Kelvin:</b> {{ (((5/9)*(tempF-32))-273.0) |number:2 }} K
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+
+</body>
+</html>

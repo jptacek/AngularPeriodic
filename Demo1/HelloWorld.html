@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body ng-app>
+<div>
+    <input type="text" ng-model="displayText"/>
+    <h2>displayText example</h2>
+    <h3>{{'You typed: ' + displayText}}</h3>
+    <h2>displayText.toUpperCase() example</h2>
+    <h3>{{'You typed: ' + displayText.toUpperCase()}}</h3>
+    <h2>displayText | uppercase (Filter) example</h2>
+    <h3>{{'You typed: ' + displayText | uppercase}}</h3>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+</body>
+</html>
