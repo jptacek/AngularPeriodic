@@ -2,10 +2,11 @@
 <html>
 <head>
     <title>Hello World</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
 </head>
-<body ng-app>
-<div>
-    <input type="text" ng-model="displayText"/>
+<body data-ng-app>
+<div class="container">
+<input type="text" data-ng-model="displayText"/>
     <h2>displayText example</h2>
     <h3>{{'You typed: ' + displayText}}</h3>
     <h2>displayText.toUpperCase() example</h2>
