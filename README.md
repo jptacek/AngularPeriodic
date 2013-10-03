@@ -4,4 +4,4 @@
 AngularJS demos featuring Periodic table data 
 
 ## Information
-These are demos that go along with blog post at Jptacek.com
+These are demos that go along with blog post at Jptacek.com (http://jptacek.com)
