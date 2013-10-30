@@ -41,6 +41,15 @@
             </li>
         </ul>
     </div>
+    <pre>&lt;li ng-repeat="element in periodic.elements |  filter:{name:elementNameOnly}"&gt;</pre>
+    <input type="text" data-ng-model="elementNameOnly"/>
+    <div id="elements4" data-ng-controller="chemCtrl" >
+        <ul>
+            <li data-ng-repeat='element in periodic.elements | filter:{name:elementNameOnly}'>
+                {{element.name}}
+            </li>
+        </ul>
+    </div>
     <div id="periodicTable"  data-ng-controller="chemCtrl" >
         <table class="table table-striped table-bordered table-hover table-condensed">
             <tr>
