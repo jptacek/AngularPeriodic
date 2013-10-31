@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html data-ng-app>
+<head>
+    <title>Elements</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <script type="text/javascript" src="../js/chemistry.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.js"></script>
+    <style>
+        .tableOdd {
+            background-color: green;
+        }
+        .tableEven {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <b>Periodic Elements</b>
+
+    <div id="periodicTable"  data-ng-controller="chemCtrl" >
+        <input type="text" data-ng-model="elementNameOnlyTable"/>
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <tr>
+                <th>Name</th><th>Atomic Number</th><th>Weight</th><th>Phase</th><th>Ionization Energy</th><th>Melting Point</th><th>Boiling</th>
+            </tr>
+            <tr data-ng-repeat="element in periodic.elements | filter:{name:elementNameOnlyTable}">
+                <td><a href="http://en.wikipedia.org/wiki/{{element.name}}" Title="Wikipedia article on {{element.name}}" target="_top">{{element.name}}</a></td>
+                <td>{{element.atomicNumber}}</td>
+                <td>{{element.atomicWeight}}</td>
+                <td>{{element.phase}}</td>
+                <td>{{element.ionization}}</td>
+                <td>{{element.melting}}</td>
+                <td>{{element.boiling}}</td>
+            </tr>
+        </table>
+    </div>
+    <div id="periodicTable2"  data-ng-controller="chemCtrl" >
+        <table class="table ">
+            <tr>
+                <th>Name</th><th>Atomic Number</th><th>Weight</th><th>Phase</th><th>Ionization Energy</th><th>Melting Point</th><th>Boiling</th>
+            </tr>
+            <tr data-ng-repeat="element in periodic.elements" data-ng-class="{tableEven: !($index%2), tableOdd: ($index%2)}">
+                <td><a href="http://en.wikipedia.org/wiki/{{element.name}}" Title="Wikipedia article on {{element.name}}" target="_top">{{element.name}}</a></td>
+                <td>{{element.atomicNumber}}</td>
+                <td >{{element.atomicWeight}}</td>
+                <td>{{element.phase}}</td>
+                <td>{{element.ionization}}</td>
+                <td>{{element.melting}}</td>
+                <td>{{element.boiling}}</td>
+            </tr>
+        </table>
+    </div>
+    <div id="periodicTable3"  data-ng-controller="chemCtrl" >
+        <table class="table ">
+            <tr>
+                <th>Name</th><th>Atomic Number</th><th>Weight</th><th>Phase</th><th>Ionization Energy</th><th>Melting Point</th><th>Boiling</th>
+            </tr>
+            <tr data-ng-repeat="element in periodic.elements" data-ng-class="{tableEven: (element.phase='Gas')}">
+                <td><a href="http://en.wikipedia.org/wiki/{{element.name}}" Title="Wikipedia article on {{element.name}}" target="_top">{{element.name}}</a></td>
+                <td>{{element.atomicNumber}}</td>
+                <td >{{element.atomicWeight}}</td>
+                <td>{{element.phase}}</td>
+                <td>{{element.ionization}}</td>
+                <td>{{element.melting}}</td>
+                <td>{{element.boiling}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function chemCtrl($scope) {
+        $scope.periodic = perioicData;
+    }
+</script>
+</html>
