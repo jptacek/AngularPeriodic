@@ -43,7 +43,7 @@ var louAlbums = {
             "album": "Coney Island Baby",
             "artist": "Lou Reed",
             "releaseDate": 12/1/1975,
-            "image": "http://upload.wikimedia.org/wikipedia/en/1/17/xReed_Coney.jpg",
+            "image": "http://upload.wikimedia.org/wikipedia/en/1/17/xfsReed_Coney.jpg",
             "producer": "Lou Reed, Godfrey",
             "label": "RCA"
         },
