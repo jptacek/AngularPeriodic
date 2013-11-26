@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>12 Days of Christmas</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <script src="../js/lib/angular.min.js"></script>
+    <script src="../js/12DaysApp.js"></script>
+    <script src="../js/controllers/christmasController.js"></script>
+
+</head>
+<body data-ng-app="christmasApp">
+<b>12 Days of Christmas Calculator</b>
+<div class="container" id="12Days" data-ng-controller="christmasController">
+    <h2>12 Days of Christmas</h2>
+    <div class="row-fluid">
+        <div class="span8">Partridge: <input id="partridgeEle" data-ng-model="partridge" type="text"> Pear Tree: <input id="pearTreeEle" data-ng-model="pearTree" type="text"> </div>
+        <div class="span4">Day 1: {{day1()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Two Turtle Doves: <input id="turtleEle" data-ng-model="turtleDove" type="text"> </div>
+        <div class="span4">Day 2: {{day2()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Three French Hens: <input id="frenchHenEle" data-ng-model="frenchHen" type="text"> </div>
+        <div class="span4">Day 3: {{day3()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Four Colly Birds: <input id="callingBirdElee" data-ng-model="callingBird" type="text"> </div>
+        <div class="span4">Day 4: {{day4()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Five Gold Rings: <input id="goldRingEle" data-ng-model="goldRing" type="text"> </div>
+        <div class="span4">Day 5: {{day5()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Six Geese a-laying: <input id="geeseEle" data-ng-model="geese" type="text"> </div>
+        <div class="span4">Day 6: {{day6()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Seven Swans a swimming: <input id="swansEle" data-ng-model="swan" type="text"> </div>
+        <div class="span4">Day 7: {{day7()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Eight Maids a Milking: <input id="milkingMaidElee" data-ng-model="milkingMaid" type="text"> </div>
+        <div class="span4">Day 8: {{day8()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Nine Ladies Dancing: <input id="ladiesEle" data-ng-model="dancingLady" type="text"> </div>
+        <div class="span4">Day 9: {{day9()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">10 Lords-a-Leaping: <input id="lordsEle" data-ng-model="lord" type="text"> </div>
+        <div class="span4">Day 10: {{day10()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Eleven Pipers piping: <input id="pipersEle" data-ng-model="piper" type="text"> </div>
+        <div class="span4">Day 11: {{day11()| currency:"$"}}</div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span8">Twelve Drummers Drumming: <input id="drummersEle" data-ng-model="drummer" type="text"> </div>
+        <div class="span4">Day 12: {{day12()| currency:"$"}}</div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">Total Cost of the twelve days:</div>
+        <div class="span4">{{totalCostChristmas()| currency:"$"}}</div>
+    </div>
+
+</div>
+</body>
+
+</html>
