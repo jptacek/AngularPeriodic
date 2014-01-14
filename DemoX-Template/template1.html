@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Elements</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <script type="text/javascript" src="../js/chemistry.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.js"></script>
+
+
+</head>
+<body data-ng-app>
+<b>Periodic Elements</b>
+
+<div id="periodicTable"  data-ng-controller="chemCtrl" >
+    <form id="frmChem">
+    <input type="text" data-ng-model="elementNameOnlyTable"/>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr>
+            <th>Name</th><th>Atomic Number</th><th>Weight</th><th>Phase</th><th>Ionization Energy</th><th>Melting Point</th><th>Boiling</th>
+        </tr>
+        <tr data-ng-repeat="element in periodic.elements | filter:{name:elementNameOnlyTable}" data-ng-include="template.url">
+
+        </tr>
+    </table>
+    </form>
+</div>
+
+
+</body>
+<script>
+    function chemCtrl($scope) {
+        $scope.periodic = perioicData;
+
+        $scope.templates =
+        [ { name: 'template1.html', url: '../js/templates/element1.html'}
+            , { name: 'template2.html', url: '../js/templates/element2.html'}];
+         $scope.template = $scope.templates[0];
+
+    }
+</script>
