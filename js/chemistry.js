@@ -1,7 +1,7 @@
 var perioicData = {
     elements: [
         {
-            "atomicNumber": 1,
+                "atomicNumber": 1,
             "name": "Hydrogen",
             "atomicWeight": 1.00794,
             "phase": "Gas",

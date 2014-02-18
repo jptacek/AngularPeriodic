@@ -1,0 +1,70 @@
+<div id="elements1" data-ng-controller="chemListCtrl">
+    <div class="row">
+        <div class="col-md-offset-2">
+            <h1>{{element.name}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <strong>Element Name: </strong>
+        </div>
+        <div class="col-md-4">
+            <a ng-href="http://en.wikipedia.org/wiki/{{element.name}}" Title="Wikipedia article on {{element.name}}" target="_blank">{{element.name}}</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <strong>Atomic Number: </strong>
+        </div>
+        <div class="col-md-4">
+            {{element.atomicNumber}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <strong>Atomic Weight: </strong>
+        </div>
+        <div class="col-md-4">
+            {{element.atomicWeight}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <strong>Phase: </strong>
+        </div>
+        <div class="col-md-4">
+            {{element.phase}} amu
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <strong>Ionization: </strong>
+        </div>
+        <div class="col-md-4">
+            {{element.ionization}} eV
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <strong>Melting: </strong>
+        </div>
+        <div class="col-md-4">
+            {{element.melting}} &deg;C
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <strong>Boiling: </strong>
+        </div>
+        <div class="col-md-4">
+            {{element.boiling}}&deg;C
+        </div>
+    </div>
+
+</div>
+</div>
