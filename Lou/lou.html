@@ -3,25 +3,96 @@
 <head>
     <title>Lou Reed</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
-    <script type="text/javascript" src="../js/lou.js"></script>
     <script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.js"></script>
 </head>
-<body data-ng-app>
-<div data-ng-controller="louCtrl">
+<h1>Lou Reed</h1>
 
-    <table class="table table-striped table-bordered table-hover table-condensed">
-        <tr>
-            <th>Album</th><th>Release</th><th>Producer</th><th>Label</th><th></th>
-        </tr>
-        <tr data-ng-repeat="album in louDrops.releases">
-            <td>{{album.album}}</td>
-            <td>{{album.releaseDate|date}}</td>
-            <td>{{album.producer}}</td>
-            <td>{{album.label}}</td>
-            <td><img data-ng-src="{{album.image}}" alt="{{album.album}} Cover Image" width="300px;" height="300px;" onerror="this.src='http://upload.wikimedia.org/wikipedia/en/8/88/Lour72.jpg'"></td>
-        </tr>
-    </table>
+<div id="page">
+    <header class="container">
+    </header>
+
+    <div id='appLouContainer' ng-app="louApp">
+        <section id="body" class="container">
+
+            <h3>Binding to Img SRC</h3>
+
+            <div id="louTable0" ng-controller="louCtrl">
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <tr>
+                        <th>Album</th>
+                        <th>Release</th>
+                        <th>Producer</th>
+                        <th>Label</th>
+                        <th></th>
+                    </tr>
+                    <tr ng-repeat="album in louDrops.releases">
+                        <td>{{album.album}}</td>
+                        <td>{{album.releaseDate|date}}</td>
+                        <td>{{album.producer}}</td>
+                        <td>{{album.label}}</td>
+                        <td><img src="{{album.image}}" alt="{{album.album}} Cover Image" width="300px;" height="300px;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Adding ng-src</h3>
+            <div id="louTable1"  ng-controller="louCtrl" >
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <tr>
+                        <th>Album</th><th>Release</th><th>Producer</th><th>Label</th><th></th>
+                    </tr>
+                    <tr ng-repeat="album in louDrops.releases">
+                        <td>{{album.album}}</td>
+                        <td>{{album.releaseDate|date}}</td>
+                        <td>{{album.producer}}</td>
+                        <td>{{album.label}}</td>
+                        <td><img ng-src="{{album.image}}" alt="{{album.album}} Cover Image" width="300px;" height="300px;"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Missing Images in Javascript Object</h3>
+
+            <div id="louTable2"  ng-controller="lou2Ctrl" >
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <tr>
+                        <th>Album</th><th>Release</th><th>Producer</th><th>Label</th><th></th>
+                    </tr>
+                    <tr ng-repeat="album in lou2Drops.releases">
+                        <td>{{album.album}}</td>
+                        <td>{{album.releaseDate| date:'medium'}}</td>
+                        <td>{{album.producer}}</td>
+                        <td>{{album.label}}</td>
+                        <td><img ng-src="{{album.image}}" alt="{{album.album}} Cover Image" width="300px;" height="300px;"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Resolve missing images</h3>
+            <div id="louTable3"  ng-controller="lou2Ctrl" >
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <tr>
+                        <th>Album</th><th>Release</th><th>Producer</th><th>Label</th><th></th>
+                    </tr>
+                    <tr ng-repeat="album in lou2Drops.releases">
+                        <td>{{album.album}}</td>
+                        <td>{{album.releaseDate| date:'medium'}}</td>
+                        <td>{{album.producer}}</td>
+                        <td>{{album.label}}</td>
+                        <td><img ng-src="{{album.image}}" alt="{{album.album}} Cover Image" width="300px;" height="300px;" onerror="this.src='Lou_Reed.jpg'" ></td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+        </section>
+    </div>
 </div>
+<script type="text/javascript" src="js/louApp.js"></script>
+<script type="text/javascript" src="js/louController.js"></script>
+<script type="text/javascript" src="js/louController2.js"></script>
+
+
 </body>
 <script>
     function louCtrl($scope) {
