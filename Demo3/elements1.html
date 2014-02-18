@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
 
-    <script type="text/javascript" src="../js/chemistry.js"></script>
-    <script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.js"></script>
     <style>
         .tableOdd {
             background-color: green;
         }
+
         .tableEven {
             background-color: orange;
         }
     </style>
 </head>
 <body>
-    <b>Periodic Elements</b>
+<div id="page" class="container">
+    <h1>Periodic Elements</h1>
     <pre>&lt;li ng-repeat="element in periodic.elements"&gt;</pre>
-    <div id="elements1" data-ng-controller="chemCtrl" >
+    <div id="elements1" data-ng-controller="chemCtrl">
         <ul>
             <li data-ng-repeat="element in periodic.elements">
                 {{element.name}} - {{element.atomicWeight}}
@@ -27,7 +27,7 @@
         </ul>
     </div>
     <pre>&lt;li ng-repeat="element in periodic.elements | limitTo:10"&gt;</pre>
-    <div id="elements2" data-ng-controller="chemCtrl" >
+    <div id="elements2" data-ng-controller="chemCtrl">
         <ul>
             <li data-ng-repeat="element in periodic.elements|limitTo:10 ">
                 {{element.name}}
@@ -36,7 +36,8 @@
     </div>
     <pre>&lt;li ng-repeat="element in periodic.elements |  filter:elementName"&gt;</pre>
     <input type="text" data-ng-model="elementName"/>
-    <div id="elements3" data-ng-controller="chemCtrl" >
+
+    <div id="elements3" data-ng-controller="chemCtrl">
         <ul>
             <li data-ng-repeat="element in periodic.elements | filter:elementName">
                 {{element.name}}
@@ -45,21 +46,26 @@
     </div>
     <pre>&lt;li ng-repeat="element in periodic.elements |  filter:{name:elementNameOnly}"&gt;</pre>
     <input type="text" data-ng-model="elementNameOnly"/>
-    <div id="elements4" data-ng-controller="chemCtrl" >
+
+    <div id="elements4" data-ng-controller="chemCtrl">
         <ul>
             <li data-ng-repeat='element in periodic.elements | filter:{name:elementNameOnly}'>
                 {{element.name}}
             </li>
         </ul>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
+</div>
+<script type="text/javascript" src="js/chemistry.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
 </body>
 <script>
     function chemCtrl($scope) {
-        $scope.periodic = perioicData;
+        $scope.periodic = periodicData;
     }
 </script>
 </html>
