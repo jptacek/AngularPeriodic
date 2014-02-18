@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Elements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../js/chemistry.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.js"></script>
+    <style>
+        .tableOdd {
+            background-color: green;
+        }
+        .tableEven {
+            background-color: gold;
+        }
+    </style>
+
+</head>
+<body data-ng-app="chemistryApp">
+<b>Periodic Elements</b>
+
+<div id="periodicTable"  data-ng-controller="chemTemplateCtrl1" >
+    <form id="frmChem">
+    <input type="text" data-ng-model="elementNameOnlyTable"/>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr>
+            <th>Name</th><th>Atomic Number</th><th>Weight</th><th>Phase</th><th>Ionization Energy</th><th>Melting Point</th><th>Boiling</th>
+        </tr>
+        <tr data-ng-repeat="element in periodic.elements | filter:{name:elementNameOnlyTable} | limitTo:15" data-ng-include="template.url">
+
+        </tr>
+    </table>
+    </form>
+</div>
+
+<div id="periodicTable2"  data-ng-controller="chemTemplateCtrl2" >
+    <form id="frmChem2">
+        <input type="text" data-ng-model="elementNameOnlyTable"/>
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <tr>
+                <th>Name</th><th>Atomic Number</th><th>Weight</th><th>Phase</th><th>Ionization Energy</th><th>Melting Point</th><th>Boiling</th>
+            </tr>
+            <tr data-ng-repeat="element in periodic.elements | filter:{name:elementNameOnlyTable} | limitTo:15" data-ng-include="template.url">
+
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div id="periodicTable3"  data-ng-controller="chemTemplateCtrl2" >
+    <form id="frmChem3">
+        <select data-ng-model="templateSelect" ng-options="template.name for template in templates"></select>
+
+
+        <input type="text" data-ng-model="elementNameOnlyTable"/>
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <tr>
+                <th>Name</th><th>Atomic Number</th><th>Weight</th><th>Phase</th><th>Ionization Energy</th><th>Melting Point</th><th>Boiling</th>
+            </tr>
+            <tr data-ng-repeat="element in periodic.elements | filter:{name:elementNameOnlyTable} | limitTo:15" data-ng-include="templateSelect.url">
+
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div id="periodicTable4"  data-ng-controller="chemTemplateCtrl3" >
+    <form id="frmChem4">
+        <select data-ng-model="templateSelect" ng-options="template.name for template in templates"></select>
+
+
+        <input type="text" data-ng-model="elementNameOnlyTable"/>
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <tr>
+                <th>Name</th><th>Atomic Number</th><th>Weight</th><th data-ng-show="templateSelect.name!='template3.html'">Phase</th><th data-ng-show="templateSelect.name!='template3.html'">Ionization Energy</th><th data-ng-show="templateSelect.name!='template3.html'">Melting Point</th><th data-ng-show="templateSelect.name!='template3.html'">Boiling</th>
+            </tr>
+            <tr data-ng-repeat="element in periodic.elements | filter:{name:elementNameOnlyTable} | limitTo:15" data-ng-include="templateSelect.url">
+
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div id="periodicTable5"  data-ng-controller="chemTemplateCtrl3" >
+    <form id="frmChem5">
+        <select data-ng-model="templateSelect" ng-options="template.name for template in templates"></select>
+
+
+        <input type="text" data-ng-model="elementNameOnlyTable"/>
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <tr>
+                <th>Name</th><th>Atomic Number</th><th>Weight</th><th data-ng-show="displayAll()">Phase</th><th data-ng-show="displayAll()">Ionization Energy</th><th data-ng-show="displayAll()">Melting Point</th><th data-ng-show="displayAll()">Boiling</th>
+            </tr>
+            <tr data-ng-repeat="element in periodic.elements | filter:{name:elementNameOnlyTable} | limitTo:15" data-ng-include="templateSelect.url">
+
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script type="text/javascript" src="js/chemistryApp.js"></script>
+<script type="text/javascript" src="js/chemistryController.js"></script>
+<script type="text/javascript" src="../js/chemistry.js"></script>
+
+
+</body>
+
