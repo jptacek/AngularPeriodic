@@ -1,6 +1,6 @@
 chemistryApp.controller('chemListCtrl',
     function chemCtrl($scope) {
-        $scope.peridodic = perioicData;
+        $scope.periodic = periodicData;
     }
 ).controller('chemItemCtrl',
     function chemCtrl($scope, $log,$routeParams) {
