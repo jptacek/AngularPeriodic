@@ -1,7 +1,7 @@
-<div id="elements1" data-ng-controller="chemListCtrl" class="container">
+<div id="elements1" ng-controller="chemListCtrl" class="container">
         <ul>
-            <li data-ng-repeat="element in periodic.elements">
-                <a data-ng-href="#/chemList/{{element.atomicNumber-1}}">{{element.name}}</a>
+            <li ng-repeat="element in periodic.elements">
+                <a ng-href="#/chemList/{{element.atomicNumber-1}}">{{element.name}}</a>
             </li>
         </ul>
 </div>
