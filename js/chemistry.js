@@ -1,4 +1,4 @@
-var perioicData = {
+var periodicData = {
     elements: [
         {
                 "atomicNumber": 1,

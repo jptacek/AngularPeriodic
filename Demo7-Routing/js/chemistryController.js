@@ -4,9 +4,13 @@ chemistryApp.controller('chemListCtrl',
     }
 ).controller('chemItemCtrl',
     function chemCtrl($scope, $log,$routeParams) {
-        $log.info('hello world');
-        var itemId = $routeParams.atomicNumber;
-        $log.info(itemId);
-        $scope.element = periodicData.elements[itemId];
+        var elementNumber  = $routeParams.atomicNumber;
+        for (var i=0;i<periodicData.elements.length;i++) {
+            if (periodicData.elements[i].atomicNumber == elementNumber) {
+                $scope.element = periodicData.elements[i];
+                break;
+            }
+        }
+
     }
 );
