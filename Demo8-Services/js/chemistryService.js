@@ -10,10 +10,10 @@ chemistryApp.service('chemistryService', function () {
 
         if (difference > 2.0) {
             return 'Ionic Bond';
-        } else if (difference >= 0.4 < 2.0) {
+        } else if (difference >= 0.5 < 1.6) {
             return 'Polar Covalent Bond';
         } else {
-            return 'Covalent Bond';
+            return 'NonPolar Covalent Bond';
         }
 
     };
