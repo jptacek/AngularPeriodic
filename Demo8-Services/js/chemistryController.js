@@ -1,5 +1,5 @@
 chemistryApp.controller('chemServiceCtrl', ['$scope', 'chemistryService',
-    function chemServiceCtrl($scope, chemistryService) {
+    function chemServiceCtrl($scope, $log, chemistryService) {
 
         $scope.elements = periodicData.elements;
 
