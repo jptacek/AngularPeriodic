@@ -1,12 +1,12 @@
 chemistryApp.controller('chemTemplateCtrl1',
     function chemCtrl($scope) {
-        $scope.periodic = perioicData;
+        $scope.periodic = periodicData;
 
         $scope.template =  {name: 'template1.html', url: 'js/templates/element1.html'};
     }
 ).controller('chemTemplateCtrl2',
     function chemCtrl($scope) {
-        $scope.periodic = perioicData;
+        $scope.periodic = periodicData;
 
         $scope.templates =
             [ { name: 'template1.html', url: 'js/templates/element1.html'}
@@ -16,7 +16,7 @@ chemistryApp.controller('chemTemplateCtrl1',
     }
 ).controller('chemTemplateCtrl3',
     function chemCtrl($scope) {
-        $scope.periodic = perioicData;
+        $scope.periodic = periodicData;
 
         $scope.templates =
             [ { name: 'template1.html', url: 'js/templates/element1.html'}
