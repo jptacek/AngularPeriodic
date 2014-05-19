@@ -1,12 +1,12 @@
 chemistryApp.service('chemistryService', function () {
 
-    this.calculateElectronegativityDifference = function (element1, element2) {
+    var calculateElectronegativityDifference = function (element1, element2) {
 
         return Math.abs(element1.electronegativity - element2.electronegativity);
 
     };
 
-    this.convertElectronegativityDifferenceToName = function (difference) {
+    var convertElectronegativityDifferenceToName = function (difference) {
 
         if (difference > 2.0) {
             return 'Ionic Bond';
@@ -16,5 +16,11 @@ chemistryApp.service('chemistryService', function () {
             return 'NonPolar Covalent Bond';
         }
 
+    };
+
+
+    return {
+        calculateElectronegativityDifference: calculateElectronegativityDifference,
+        convertElectronegativityDifferenceToName: convertElectronegativityDifferenceToName
     };
 });
