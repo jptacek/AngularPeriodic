@@ -1,10 +1,17 @@
-chemistryApp.directive('jp-chemElement', function ($log) {
-    $log.info('hi mom');
+chemistryApp.directive('periodicchartelement', function (chemistryService) {;
     return {
-        restrict: 'E',
+        restrict: 'A',
+        templateUrl: './template/periodic-template.html',
         scope:{
-            element:'='
+            element:'=',
+            statetype:'='
         },
-        templateUrl:'periodic-template.html'
+        link: function (scope, element, attrs) {
+            scope.getCssClassElementx = chemistryService.cssElement;
+            alert( scope.getCssClassElementx);
+        }
+
+
     }
+
 });

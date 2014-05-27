@@ -4,8 +4,19 @@
     <title>Elements - Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <style>
+        .periodicCell {
+            text-align:center;
+            background-color:white;
+            border:1px solid black;
+            width:100px;}
+        .metalloids  {
+            background-color: aqua;
+        }
+
+    </style>
 </head>
-<body data-ng-app="chemistryApp">
+<body data-ng-app="chemistryApp" >
     <div class="container" data-ng-controller="chemistryController">
         <h1>Periodic Elements - Directives</h1>
         <select ng-model="periodicElement"  ng-options="e.name for e in elements" ></select><br />
@@ -14,9 +25,7 @@
             {{periodicElement.name}}
         </div>
 
-        <div class="row">Foo
-            <jp-chemElement  />
-        </div>
+        <div periodicchartelement element="periodicElement" statetype="getCssClassElementx"></div>
 
     </div>
 
@@ -30,8 +39,8 @@
 
 <script type="text/javascript" src="js/chemistryApp.js"></script>
 <script type="text/javascript" src="js/chemistryController.js"></script>
-<script type="text/javascript" src="js/chemistryDirective.js"></script>
 <script type="text/javascript" src="js/chemistryService.js"></script>
+<script type="text/javascript" src="js/chemistryDirective.js"></script>
 
 </body>
 </html>
