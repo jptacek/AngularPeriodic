@@ -1,5 +1,5 @@
-chemistryApp.controller('chemistryController', ['$scope', 'chemistryService',
-    function chemistryController($scope,  chemistryService) {
+chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$log',
+    function chemistryController($scope,  chemistryService,$log) {
 
         $scope.elements = chemistryService.getElements();
 
@@ -7,9 +7,15 @@ chemistryApp.controller('chemistryController', ['$scope', 'chemistryService',
 
         $scope.isMetalloid = true;
 
-        $scope.getCssClassElementx = chemistryService.getCssClassElement($scope.periodicElement.name);
+        $scope.getCssClassElement = chemistryService.getCssClassElement($scope.periodicElement.type);
 
-        $scope.cssElement = chemistryService.testing1();
+        $scope.updateController = function(selectedElement) {
+            $log.info(selectedElement.name);
+            $scope.periodicElement = selectedElement;
+            $scope.getCssClassElement = chemistryService.getCssClassElement($scope.periodicElement.type);
+            $log.info($scope.getCssClassElement);
+
+        };
 
         /* private methods */
 

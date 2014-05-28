@@ -8,13 +8,36 @@ chemistryApp.service('chemistryService', function () {
             case 'metalloids':
                 cssClass = 'metalloids';
                 break;
+            case 'alkali metal':
+                cssClass = 'alkaliMetal';
+                break;
+            case 'non metal':
+                cssClass = 'nonMetal';
+                break;
+            case 'noble gas':
+                cssClass = 'nobleGas';
+                break;
+            case 'halogen':
+                cssClass = 'halogen';
+                break;
+            case 'alkaline earth':
+                cssClass = 'alkalineEarth';
+                break;
+            case 'poor metal':
+                cssClass = 'poorMetal';
+                break;
+            case 'rare earth metal':
+                cssClass = 'lathanoids';
+                break;
+            case 'transition metal':
+                cssClass = 'actinoids';
+                break;
+            case 'alkaline earth metal':
+                cssClass = 'poorMetal';
+                break;
         }
         return cssClass;
     };
-
-    var testing1= function() {
-        return 'noble';
-    }
 
     var getElements = function() {
 
@@ -126,7 +149,6 @@ chemistryApp.service('chemistryService', function () {
 
 
     return {
-        testing1 : testing1,
         getCssClassElement : getCssClassElement,
         getElements: getElements
     };

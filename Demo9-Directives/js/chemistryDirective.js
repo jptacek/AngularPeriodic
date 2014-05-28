@@ -1,16 +1,11 @@
 chemistryApp.directive('periodicchartelement', function (chemistryService) {;
     return {
-        restrict: 'A',
+        restrict: 'E',
         templateUrl: './template/periodic-template.html',
         scope:{
             element:'=',
-            statetype:'='
-        },
-        link: function (scope, element, attrs) {
-            scope.getCssClassElementx = chemistryService.cssElement;
-            alert( scope.getCssClassElementx);
+            cssType:'=csstypeclass'
         }
-
 
     }
 

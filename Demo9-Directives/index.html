@@ -13,22 +13,51 @@
         .metalloids  {
             background-color: aqua;
         }
+        .alkaliMetal {
+            background-color: grey;
+        }
+        .nonMetal {
+            background-color: forestgreen;
+        }
+        .nobleGas {
+            background-color: darkorange;
+        }
+        .halogen {
+            background-color: aqua;
+        }
+        .alkalineEarth {
+
+        }
+        .lathanoids {
+            background-color: coral;
+        }
+        .actinoids {
+            background-color: lightcoral;
+        }
+        .poorMetal {
+            background-color: lightseagreen;
+
+        }
+
 
     </style>
 </head>
 <body data-ng-app="chemistryApp" >
     <div class="container" data-ng-controller="chemistryController">
         <h1>Periodic Elements - Directives</h1>
-        <select ng-model="periodicElement"  ng-options="e.name for e in elements" ></select><br />
-
         <div class="row">
-            {{periodicElement.name}}
+        <select ng-model="periodicElement"  ng-options="e.name for e in elements" ng-click="updateController(periodicElement)"></select><br />
         </div>
+        <div class="row">
+            &nbsp;
+        </div>
+        <div class="row">
+            <periodicchartelement element="periodicElement" csstypeclass="getCssClassElement"></periodicchartelement>
+        </div>
+    <!-- Mention these need to be lower case!-->
 
-        <div periodicchartelement element="periodicElement" statetype="getCssClassElementx"></div>
-
+        {{getCssClassElementx}}
     </div>
-
 <script type="text/javascript" src="../js/lib/angular.min.js"></script>
 <script type="text/javascript" src="../js/lib/angular-route.min.js"></script>
 
