@@ -5,8 +5,6 @@ chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$l
 
         $scope.periodicElement = $scope.elements[0];
 
-        $scope.isMetalloid = true;
-
         $scope.getCssClassElement = chemistryService.getCssClassElement($scope.periodicElement.type);
 
         $scope.updateController = function(selectedElement) {
@@ -16,10 +14,6 @@ chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$l
             $log.info($scope.getCssClassElement);
 
         };
-
-        /* private methods */
-
-
 
     }]
 );

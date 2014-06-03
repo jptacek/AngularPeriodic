@@ -4,43 +4,7 @@
     <title>Elements - Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
-    <style>
-        .periodicCell {
-            text-align:center;
-            background-color:white;
-            border:1px solid black;
-            width:100px;}
-        .metalloids  {
-            background-color: aqua;
-        }
-        .alkaliMetal {
-            background-color: grey;
-        }
-        .nonMetal {
-            background-color: forestgreen;
-        }
-        .nobleGas {
-            background-color: darkorange;
-        }
-        .halogen {
-            background-color: aqua;
-        }
-        .alkalineEarth {
-
-        }
-        .lathanoids {
-            background-color: coral;
-        }
-        .actinoids {
-            background-color: lightcoral;
-        }
-        .poorMetal {
-            background-color: lightseagreen;
-
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="../css/chemistry.css"/>
 </head>
 <body data-ng-app="chemistryApp" >
     <div class="container" data-ng-controller="chemistryController">
@@ -52,11 +16,27 @@
             &nbsp;
         </div>
         <div class="row">
-            <periodicchartelement element="periodicElement" csstypeclass="getCssClassElement"></periodicchartelement>
+            &nbsp;
         </div>
-    <!-- Mention these need to be lower case!-->
+        <div class="row">
+            <div class="col-md-2">
+                <periodicchartelement element="periodicElement" csstypeclass="getCssClassElement"></periodicchartelement>
+            </div>
+            <div class="col-md-3">
+                <div class="metalloids"><b>Metalloids</b></div>
+                <div class="alkaliMetal"><b>Alkali Metal</b></div>
+                <div class="nonMetal"><b>Non Metal</b></div>
+                <div class="nobleGas"><b>Noble Gas</b></div>
+                <div class="halogen"><b>Halogen</b></div>
+                <div class="alkalineEarth"><b>Alkaline Earth</b></div>
+                <div class="poorMetal"><b>Poor Metal</b></div>
+                <div class="lathanoids"><b>Rare Earth Metal</b></div>
+                <div class="actinoids"><b>Transition Metal</b></div>
+                <div class="poorMetal"><b>Alkaline Earth Metal</b></div>
+            </div>
+        </div>
+    </div>    <!-- Mention these need to be lower case!-->
 
-        {{getCssClassElementx}}
     </div>
 <script type="text/javascript" src="../js/lib/angular.min.js"></script>
 <script type="text/javascript" src="../js/lib/angular-route.min.js"></script>

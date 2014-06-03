@@ -1,0 +1,34 @@
+.periodicCell {
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    width: 100px;
+}
+.metalloids {
+    background-color: aqua;
+}
+.alkaliMetal {
+    background-color: grey;
+}
+.nonMetal {
+    background-color: forestgreen;
+}
+.nobleGas {
+    background-color: darkorange;
+}
+.halogen {
+    background-color: yellow;
+}
+.alkalineEarth {
+    background-color: orangered;
+}
+.lathanoids {
+    background-color: coral;
+}
+.actinoids {
+    background-color: lightcoral;
+}
+.poorMetal {
+    background-color: mediumpurple;
+}
+
