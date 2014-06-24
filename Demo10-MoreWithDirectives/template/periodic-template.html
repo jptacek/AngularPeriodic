@@ -1,0 +1,12 @@
+<div class='periodicCell' ng-class="cssType" data-ng-hide="fullElement">
+    <span style="text-align: left"><small>{{element.atomicNumber}}</small></span>&nbsp;&nbsp; <span style="text-align: right"><small>{{element.atomicWeight}}</small></span><br />
+    <span style="font-size:24px;"><strong>{{element.symbol}}</strong></span><br />
+    <span><small>{{element.name }}</small></span>
+</div>
+<div class='periodicLarge' ng-class="cssType" data-ng-show="fullElement">
+    <span style="text-align: left">{{element.atomicNumber}}</span>&nbsp;&nbsp; <span style="text-align: right">{{element.atomicWeight}}</span><br />
+    <span style="font-size:24px;"><strong>{{element.symbol}}</strong></span><br />
+    <span style="text-align: left;font-size:16px;">{{element.melting}}</span>&nbsp;&nbsp; <span style="text-align: right;font-size:16px;">{{element.boiling}}</span><br />
+    <span><small>{{element.name }}</small></span>
+
+</div>
