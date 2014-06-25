@@ -9,10 +9,8 @@ chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$l
         $scope.getCssClassElement = chemistryService.getCssClassElement($scope.periodicElement.type);
 
         $scope.updateController = function(selectedElement) {
-            $log.info(selectedElement.name);
             $scope.periodicElement = selectedElement;
             $scope.getCssClassElement = chemistryService.getCssClassElement($scope.periodicElement.type);
-            $log.info($scope.getCssClassElement);
 
         };
 

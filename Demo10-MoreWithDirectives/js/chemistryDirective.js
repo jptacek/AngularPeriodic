@@ -4,8 +4,11 @@ chemistryApp.directive('periodicchartelement', function (chemistryService) {;
         templateUrl: './template/periodic-template.html',
         link: function (scope, elem, attrs) {
             elem.bind('click', function() {
-                alert('hi');
-                scope.fullElement = !scope.fullElement;
+                // CHhange state
+                scope.$apply(function(){
+                    scope.fullElement = !(scope.fullElement);
+                });
+
             });
             elem.bind('mouseover', function() {
                 elem.css('cursor', 'pointer');
