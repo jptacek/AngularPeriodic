@@ -45,20 +45,25 @@
 .poorMetal {
   background-color: mediumpurple;
 }
+.clear { clear: both; }
 .baseLeftText {
-  text-align: left;
+  text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
   font-size: @baseCellFontSize;
 }
 .popLeftText {
-  text-align: left;
+  .baseLeftText;
   font-size: @basePopFontSize;
 }
 .baseRightText {
   text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
   font-size: @baseCellFontSize;
 }
 .popRightText {
-  text-align: right;
+  .baseRightText;
   font-size: @basePopFontSize;
 }
 
@@ -77,22 +82,34 @@
 }
 .meltingPoint {
   .popLeftText;
+  position: relative;
+  .clear;
 }
 .boilingPoint {
   .popLeftText;
+  position: relative;
+  .clear;
 }
 
 .atomicSymbol {
   font-weight: bold;
+  text-align: center;
   font-size: @baseSymbolFontSize;
 }
 .atomicSymbolPop {
-  font-weight: bold;
+  .atomicSymbol;
   font-size: @popSymbolFontSize;
 }
-.elementName {
+.centerElementDisplay {
   font-weight: bold;
 }
-.elementNamePop {
-  font-weight: bold;
+.centerElementDisplayPop {
+  .centerElementDisplay;
+  font-size: @popSymbolFontSize;
+}
+.elecConfig {
+  .centerElementDisplay;
+  font-weight: normal;
+  font-size: @basePopFontSize;
+
 }

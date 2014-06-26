@@ -37,57 +37,99 @@
 .poorMetal {
   background-color: mediumpurple;
 }
+.clear {
+  clear: both;
+}
 .baseLeftText {
-  text-align: left;
+  text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
   font-size: 10px;
 }
 .popLeftText {
-  text-align: left;
+  text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
+  font-size: 10px;
   font-size: 28px;
 }
 .baseRightText {
   text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
   font-size: 10px;
 }
 .popRightText {
   text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
+  font-size: 10px;
   font-size: 28px;
 }
 .atomicNumber {
-  text-align: left;
+  text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
   font-size: 10px;
 }
 .atomicNumberPop {
-  text-align: left;
+  text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
+  font-size: 10px;
   font-size: 28px;
 }
 .atomicWeight {
   text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
   font-size: 10px;
 }
 .atomicWeightPop {
   text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
+  font-size: 10px;
   font-size: 28px;
 }
 .meltingPoint {
-  text-align: left;
+  text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
+  font-size: 10px;
   font-size: 28px;
+  position: relative;
+  clear: both;
 }
 .boilingPoint {
-  text-align: left;
+  text-align: right;
+  margin: 2px 10px;
+  display: inline-block;
+  font-size: 10px;
   font-size: 28px;
+  position: relative;
+  clear: both;
 }
 .atomicSymbol {
   font-weight: bold;
+  text-align: center;
   font-size: 25px;
 }
 .atomicSymbolPop {
   font-weight: bold;
+  text-align: center;
+  font-size: 25px;
   font-size: 43px;
 }
-.elementName {
+.centerElementDisplay {
   font-weight: bold;
 }
-.elementNamePop {
+.centerElementDisplayPop {
   font-weight: bold;
+  font-size: 43px;
+}
+.elecConfig {
+  font-weight: bold;
+  font-weight: normal;
+  font-size: 28px;
 }

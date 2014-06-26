@@ -1,12 +1,15 @@
-<div class='periodicCell' ng-class="cssType" data-ng-hide="fullElement">
-    <span class="atomicNumber"><small>{{element.atomicNumber}}</small></span>&nbsp;&nbsp; <span class="atomicWeight">{{element.atomicWeight}}</span><br />
-    <span class="atomicSymbol">{{element.symbol}}</span><br />
-    <span class="elementName">{{element.name }}</span>
+<div class='periodicCell {{elementCssClass}}' data-ng-hide="fullElement">
+    <div class="atomicNumber">{{element.atomicNumber}}</div><div class="atomicWeight">{{element.atomicWeight}}</div>
+    <div class="atomicSymbol">{{element.symbol}}</div>
+    <div class="centerElementDisplay">{{element.name }}</div>
 </div>
-<div class='periodicPop' ng-class="cssType" data-ng-show="fullElement">
-    <span class="atomicNumberPop">{{element.atomicNumber}}</span>&nbsp;&nbsp; <span class="atomicWeightPop">{{element.atomicWeight}}</span><br />
-    <span class="atomicSymbolPop">{{element.symbol}}</span><br />
-    <span class="meltingPoint">{{element.melting}}</span>&nbsp;&nbsp; <span class="boilingPoint">{{element.boiling}}</span><br />
-    <span class="elementNamePop">{{element.name }}</span>
+<div class='periodicPop {{elementCssClass}}'  data-ng-show="fullElement">
+    <div class="atomicNumberPop">{{element.atomicNumber}}</div>
+    <div class="atomicWeightPop">{{element.atomicWeight}}</div>
+    <div class="atomicSymbolPop">{{element.symbol}}</div>
+    <div class="boilingPoint">{{element.boiling}}</div>
+    <div class="meltingPoint">{{element.melting}}</div>
+    <div class="elecConfig">{{element.elecconfig }}</div>
+    <div class="centerElementDisplayPop">{{element.name }}</div>
 
 </div>
