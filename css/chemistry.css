@@ -9,6 +9,134 @@
   background-color: #ffffff;
   border: 1px solid black;
   width: 250px;
+  margin: 0 auto;
+  position: relative;
+  height: 250px;
+}
+.clear {
+  clear: both;
+}
+.baseLeftText {
+  text-align: left;
+  margin: 2px 10px;
+  float: left;
+  font-size: 10px;
+}
+.popLeftText {
+  text-align: left;
+  margin: 2px 10px;
+  float: left;
+  font-size: 10px;
+  font-size: 28px;
+  left: 2px;
+}
+.baseRightText {
+  text-align: right;
+  float: right;
+  margin: 2px 10px;
+  font-size: 10px;
+}
+.popRightText {
+  text-align: right;
+  float: right;
+  margin: 2px 10px;
+  font-size: 10px;
+  font-size: 28px;
+}
+.atomicNumber {
+  text-align: left;
+  margin: 2px 10px;
+  float: left;
+  font-size: 10px;
+}
+.atomicNumberPop {
+  text-align: left;
+  margin: 2px 10px;
+  float: left;
+  font-size: 10px;
+  font-size: 28px;
+  left: 2px;
+}
+.atomicWeight {
+  text-align: right;
+  float: right;
+  margin: 2px 10px;
+  font-size: 10px;
+}
+.atomicWeightPop {
+  text-align: right;
+  float: right;
+  margin: 2px 10px;
+  font-size: 10px;
+  font-size: 28px;
+}
+.meltingPoint {
+  text-align: left;
+  margin: 2px 10px;
+  float: left;
+  font-size: 10px;
+  font-size: 28px;
+  left: 2px;
+  top: 40%;
+  position: absolute;
+  clear: both;
+}
+.boilingPoint {
+  text-align: left;
+  margin: 2px 10px;
+  float: left;
+  font-size: 10px;
+  font-size: 28px;
+  left: 2px;
+  top: 20%;
+  position: absolute;
+  clear: both;
+}
+.atomicSymbol {
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+.atomicSymbolPop {
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  text-align: right;
+  position: absolute;
+  font-size: 43px;
+  top: 100px;
+  right: 5px;
+}
+.centerElementDisplay {
+  font-weight: bold;
+  text-align: center;
+}
+.centerElementDisplayPop {
+  font-weight: bold;
+  text-align: center;
+  font-size: 43px;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+}
+.elecConfig {
+  font-weight: bold;
+  text-align: center;
+  font-weight: normal;
+  position: absolute;
+  bottom: 50px;
+  font-size: 28px;
+  width: 100%;
+}
+.elctroNeg {
+  text-align: left;
+  margin: 2px 10px;
+  float: left;
+  font-size: 10px;
+  font-size: 28px;
+  left: 2px;
+  position: absolute;
+  top: 60%;
 }
 .metalloids {
   background-color: aqua;
@@ -36,100 +164,4 @@
 }
 .poorMetal {
   background-color: mediumpurple;
-}
-.clear {
-  clear: both;
-}
-.baseLeftText {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-}
-.popLeftText {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-  font-size: 28px;
-}
-.baseRightText {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-}
-.popRightText {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-  font-size: 28px;
-}
-.atomicNumber {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-}
-.atomicNumberPop {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-  font-size: 28px;
-}
-.atomicWeight {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-}
-.atomicWeightPop {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-  font-size: 28px;
-}
-.meltingPoint {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-  font-size: 28px;
-  position: relative;
-  clear: both;
-}
-.boilingPoint {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: 10px;
-  font-size: 28px;
-  position: relative;
-  clear: both;
-}
-.atomicSymbol {
-  font-weight: bold;
-  text-align: center;
-  font-size: 25px;
-}
-.atomicSymbolPop {
-  font-weight: bold;
-  text-align: center;
-  font-size: 25px;
-  font-size: 43px;
-}
-.centerElementDisplay {
-  font-weight: bold;
-}
-.centerElementDisplayPop {
-  font-weight: bold;
-  font-size: 43px;
-}
-.elecConfig {
-  font-weight: bold;
-  font-weight: normal;
-  font-size: 28px;
 }

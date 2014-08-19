@@ -5,6 +5,7 @@
 @popSymbolFontSize: @basePopFontSize + 15px;
 @baseWidth: 100px;
 @popWidth: 2.5* @baseWidth;
+@popHeight: @popWidth;
 
 .periodicCell {
   text-align: center;
@@ -17,6 +18,105 @@
   background-color: @mainFontColor;
   border: 1px solid black;
   width: @popWidth;
+  margin: 0 auto;
+  position: relative;
+  height: @popHeight
+}
+
+.clear { clear: both; }
+.baseLeftText {
+  text-align: left;
+  margin: 2px 10px;
+  //display: inline-block;
+  //width: 70px;
+  float: left;
+  font-size: @baseCellFontSize;
+}
+.popLeftText {
+  .baseLeftText;
+  font-size: @basePopFontSize;
+  left: 2px;
+
+}
+.baseRightText {
+  text-align: right;
+  float: right;
+  margin: 2px 10px;
+  //display: inline-block;
+  //width: 100px;
+  font-size: @baseCellFontSize;
+}
+.popRightText {
+  .baseRightText;
+  font-size: @basePopFontSize;
+}
+
+.atomicNumber {
+  .baseLeftText;
+}
+
+.atomicNumberPop {
+  .popLeftText;
+}
+.atomicWeight {
+  .baseRightText;
+}
+.atomicWeightPop {
+  .popRightText;
+}
+.meltingPoint {
+  .popLeftText;
+  top: 40%;
+  position: absolute;
+  .clear;
+}
+.boilingPoint {
+  .popLeftText;
+  top: 20%;
+  position: absolute;
+  .clear;
+}
+
+.atomicSymbol {
+  font-weight: bold;
+  text-align: center;
+  font-size: @baseSymbolFontSize;
+}
+.atomicSymbolPop {
+  .atomicSymbol;
+  text-align: right;
+  position: absolute;
+  font-size: @popSymbolFontSize;
+  top: 100px;
+  right: 5px;
+
+}
+.centerElementDisplay {
+  font-weight: bold;
+  text-align: center;
+}
+.centerElementDisplayPop {
+  .centerElementDisplay;
+  font-size: @popSymbolFontSize;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+}
+
+.elecConfig {
+  .centerElementDisplay;
+  font-weight: normal;
+  position: absolute;
+  bottom: 50px;
+  font-size: @basePopFontSize;
+  width: 100%
+}
+
+.elctroNeg{
+  .popLeftText;
+  position: absolute;
+  top: 60%;
+
 }
 .metalloids {
   background-color: aqua;
@@ -44,72 +144,4 @@
 }
 .poorMetal {
   background-color: mediumpurple;
-}
-.clear { clear: both; }
-.baseLeftText {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: @baseCellFontSize;
-}
-.popLeftText {
-  .baseLeftText;
-  font-size: @basePopFontSize;
-}
-.baseRightText {
-  text-align: right;
-  margin: 2px 10px;
-  display: inline-block;
-  font-size: @baseCellFontSize;
-}
-.popRightText {
-  .baseRightText;
-  font-size: @basePopFontSize;
-}
-
-.atomicNumber {
-  .baseLeftText;
-}
-
-.atomicNumberPop {
-  .popLeftText;
-}
-.atomicWeight {
-  .baseRightText;
-}
-.atomicWeightPop {
-  .popRightText;
-}
-.meltingPoint {
-  .popLeftText;
-  position: relative;
-  .clear;
-}
-.boilingPoint {
-  .popLeftText;
-  position: relative;
-  .clear;
-}
-
-.atomicSymbol {
-  font-weight: bold;
-  text-align: center;
-  font-size: @baseSymbolFontSize;
-}
-.atomicSymbolPop {
-  .atomicSymbol;
-  font-size: @popSymbolFontSize;
-}
-.centerElementDisplay {
-  font-weight: bold;
-}
-.centerElementDisplayPop {
-  .centerElementDisplay;
-  font-size: @popSymbolFontSize;
-}
-.elecConfig {
-  .centerElementDisplay;
-  font-weight: normal;
-  font-size: @basePopFontSize;
-
 }
