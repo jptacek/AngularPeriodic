@@ -56,6 +56,7 @@
   font-size: 10px;
   font-size: 28px;
   left: 2px;
+  font-weight: bold;
 }
 .atomicWeight {
   text-align: right;
@@ -69,6 +70,7 @@
   margin: 2px 10px;
   font-size: 10px;
   font-size: 28px;
+  font-weight: bold;
 }
 .meltingPoint {
   text-align: left;
@@ -77,7 +79,7 @@
   font-size: 10px;
   font-size: 28px;
   left: 2px;
-  top: 40%;
+  top: 34%;
   position: absolute;
   clear: both;
 }
@@ -88,9 +90,29 @@
   font-size: 10px;
   font-size: 28px;
   left: 2px;
-  top: 20%;
+  top: 17%;
   position: absolute;
   clear: both;
+}
+.elctroNeg {
+  text-align: left;
+  margin: 2px 10px;
+  float: left;
+  font-size: 10px;
+  font-size: 28px;
+  left: 2px;
+  position: absolute;
+  top: 51%;
+}
+.density {
+  float: right;
+  margin: 2px 10px;
+  font-size: 10px;
+  font-size: 28px;
+  position: absolute;
+  top: 17%;
+  text-align: right;
+  right: 5px;
 }
 .atomicSymbol {
   font-weight: bold;
@@ -127,16 +149,6 @@
   bottom: 50px;
   font-size: 28px;
   width: 100%;
-}
-.elctroNeg {
-  text-align: left;
-  margin: 2px 10px;
-  float: left;
-  font-size: 10px;
-  font-size: 28px;
-  left: 2px;
-  position: absolute;
-  top: 60%;
 }
 .metalloids {
   background-color: aqua;

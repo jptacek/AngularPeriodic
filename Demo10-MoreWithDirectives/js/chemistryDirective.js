@@ -5,7 +5,7 @@ chemistryApp.directive('periodicchartelement', function (chemistryService) {;
         link: function (scope, elem, attrs) {
             elem.addClass('nonMetal');
             elem.bind('click', function() {
-                // CHhange state
+                // Change state
                 scope.$apply(function(){
                     scope.fullElement = !(scope.fullElement);
                 });
