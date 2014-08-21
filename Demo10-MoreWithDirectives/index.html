@@ -6,40 +6,58 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/chemistry.css"/>
 </head>
-<body data-ng-app="chemistryApp" >
-    <div class="container" data-ng-controller="chemistryController">
-        <h1>Periodic Elements - Directives</h1>
-        <div class="row">
-        <select ng-model="periodicElement"  ng-options="e.name for e in elements" ng-click="updateController(periodicElement)"></select><br />
-        </div>
-        <div class="row">
-            &nbsp;
-        </div>
-        <div class="row">
-            &nbsp;
-        </div>
-        <div class="row">
-            <div class="col-md-2" >
-                <periodicchartelement element="periodicElement" element-css-class="{{getCssClassElement}}" ></periodicchartelement>
-            </div>
-            <!--
-            <div class="col-md-3">
-                <div class="metalloids"><b>Metalloids</b></div>
-                <div class="alkaliMetal"><b>Alkali Metal</b></div>
-                <div class="nonMetal"><b>Non Metal</b></div>
-                <div class="nobleGas"><b>Noble Gas</b></div>
-                <div class="halogen"><b>Halogen</b></div>
-                <div class="alkalineEarth"><b>Alkaline Earth</b></div>
-                <div class="poorMetal"><b>Poor Metal</b></div>
-                <div class="lathanoids"><b>Rare Earth Metal</b></div>
-                <div class="actinoids"><b>Transition Metal</b></div>
-                <div class="poorMetal"><b>Alkaline Earth Metal</b></div>
-            </div>
-            -->
-        </div>
-    </div>    <!-- Mention these need to be lower case!-->
+<body data-ng-app="chemistryApp">
+<div class="container" data-ng-controller="chemistryController">
+    <h1>Periodic Elements - Directives</h1>
 
+    <div class="row">
+        <select ng-model="periodicElement" ng-options="e.name for e in elements"
+                ng-click="updateController(periodicElement)"></select><br/>
     </div>
+    <div class="row">
+        &nbsp;
+    </div>
+    <div class="row">
+        &nbsp;
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <periodicchartelement element="periodicElement"
+                                  element-css-class="{{getCssClassElement}}"></periodicchartelement>
+        </div>
+        <!--
+        <div class="col-md-3">
+            <div class="metalloids"><b>Metalloids</b></div>
+            <div class="alkaliMetal"><b>Alkali Metal</b></div>
+            <div class="nonMetal"><b>Non Metal</b></div>
+            <div class="nobleGas"><b>Noble Gas</b></div>
+            <div class="halogen"><b>Halogen</b></div>
+            <div class="alkalineEarth"><b>Alkaline Earth</b></div>
+            <div class="poorMetal"><b>Poor Metal</b></div>
+            <div class="lathanoids"><b>Rare Earth Metal</b></div>
+            <div class="actinoids"><b>Transition Metal</b></div>
+            <div class="poorMetal"><b>Alkaline Earth Metal</b></div>
+        </div>
+        -->
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            &nbsp;
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-2">
+            <periodicchartelement element="elements[4]" element-css-class="{{getCssClassElement}}"></periodicchartelement>
+        </div>
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+        <div class="col-md-2">
+            <periodicchartelement element="elements[58]" element-css-class="{{getCssClassElement}}"></periodicchartelement>
+        </div>
+    </div>
+</div>
+
 <script type="text/javascript" src="../js/lib/angular.min.js"></script>
 <script type="text/javascript" src="../js/lib/angular-route.min.js"></script>
 

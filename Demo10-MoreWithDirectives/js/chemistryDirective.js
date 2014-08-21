@@ -3,7 +3,6 @@ chemistryApp.directive('periodicchartelement', function (chemistryService) {;
         restrict: 'E',
         templateUrl: './template/periodic-template.html',
         link: function (scope, elem, attrs) {
-            elem.addClass('nonMetal');
             elem.bind('click', function() {
                 // Change state
                 scope.$apply(function(){
