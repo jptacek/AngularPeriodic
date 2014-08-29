@@ -13,10 +13,11 @@ chemistryApp.directive('periodicchartelement', function (chemistryService) {;
             elem.bind('mouseover', function() {
                 elem.css('cursor', 'pointer');
             });
+
         },
         scope:{
             element:'=',
-            elementCssClass:'@elementCssClass'
+            elementCssClass:'&'
         }
 
     }
