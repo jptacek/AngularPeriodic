@@ -1,4 +1,4 @@
-chemistryApp.directive('periodicchartelement', function (chemistryService) {;
+chemistryApp.directive('periodicChartElement', function (chemistryService) {;
     return {
         restrict: 'E',
         templateUrl: './template/periodic-template.html',
