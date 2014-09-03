@@ -22,7 +22,7 @@
     </div>
     <div class="row">
         <div class="col-md-2">
-            <periodic-chart-element element="periodicElement"></periodic-chart-element>
+            <periodic-chart-element element="periodicElement" css-For-Element="{{cssForElement}}"></periodic-chart-element>{{element.type}}zz
         </div>
         <!--
         <div class="col-md-3">
@@ -46,13 +46,13 @@
         </div>
     <div class="row">
         <div class="col-md-2">
-            <periodic-chart-element element="elements[4]" ></periodic-chart-element>
+            <periodic-chart-element element="elements[4]" jpcss-For-Element="getCssClassElement2()" ></periodic-chart-element>{{cssForElement}}
         </div>
         <div class="col-md-2">
             &nbsp;
         </div>
         <div class="col-md-2">
-            <periodic-chart-element element="elements[58]" element-css-class="getCssClassElement3()"></periodic-chart-element>
+            <periodic-chart-element element="elements[58]" jpcss-For-Element="getCssClassElement2()"></periodic-chart-element>{{cssForElement}}
         </div>
     </div>
 </div>

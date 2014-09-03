@@ -17,6 +17,7 @@ chemistryApp.directive('periodicChartElement', function (chemistryService) {;
         },
         scope:{
             element:'=',
+            jpcssForElement:'=',
             elementCssClass:'&'
         }
 

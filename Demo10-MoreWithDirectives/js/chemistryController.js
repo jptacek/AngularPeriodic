@@ -10,23 +10,36 @@ chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$l
         var selectEleType = $scope.element.type;
 
 //        $scope.getCssClassElement =  chemistryService.getCssClassElement($scope.periodicElement.type);
-        $scope.getCssClassElement =  determineCSS(selectEleType);
-        $scope.getCssClassElement3 =  getCssClassElement3();
 
         $scope.cssForElement = getCssClassElement3();
+        $scope.jpcssForElement= function(){
+            $log.info('type: '+  selectEleType + ' : ' +  $scope.element.name);
+            var cssClassName =chemistryService.getCssClassElement($scope.element.type);
+            $scope.cssForElement =cssClassName;
+            //$scope.$apply();
+            $log.info('cssClassName: '+  cssClassName );
+
+            return cssClassName;
+        };
+
         function determineCSS(elementType) {
             var cssClassName =chemistryService.getCssClassElement(elementType);
             return cssClassName;
         };
-        function getCssClassElement2(elementType) {
-            var cssClassName =chemistryService.getCssClassElement(elementType);
+
+
+        $scope.getCssClassElement2 = function(){
+            $log.info('type: '+  selectEleType + ' : ' +  $scope.periodicElement.name)
+            var cssClassName =chemistryService.getCssClassElement($scope.element.type);
+            $scope.cssForElement =cssClassName;
+            //$scope.$apply();
             return cssClassName;
         };
         function getCssClassElement3() {
-           $log.info('type: '+  $scope.element.type)
+           $log.info('type: '+  selectEleType + ' : ' +  $scope.periodicElement.name)
             var cssClassName =chemistryService.getCssClassElement($scope.element.type);
             $scope.cssForElement =cssClassName;
-            $scope.$apply();
+            //$scope.$apply();
             return cssClassName;
         };
 
