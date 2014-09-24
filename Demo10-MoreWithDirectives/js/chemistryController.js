@@ -27,9 +27,19 @@ chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$l
             return cssClassName;
         };
 
-
+        $scope.getCssClassElement4 = function(selectedElement){
+            $log.info('getCssClassElement4: ');
+            $log.info('getCssClassElement4: '+  selectEleType + ' : ' +  selectedElement);
+            $scope.element = selectedElement;
+            $scope.cssForElement2 = chemistryService.getCssClassElement(selectedElement);
+            var cssClassName =chemistryService.getCssClassElement(selectedElement);
+            $scope.cssForElement =cssClassName;
+            //$scope.$apply();
+            return cssClassName;
+        };
         $scope.getCssClassElement2 = function(){
-            $log.info('type: '+  selectEleType + ' : ' +  $scope.periodicElement.name)
+            $log.info('ele2: ');
+            $log.info('type: '+  selectEleType + ' : ' +  $scope.periodicElement.name);
             var cssClassName =chemistryService.getCssClassElement($scope.element.type);
             $scope.cssForElement =cssClassName;
             //$scope.$apply();
