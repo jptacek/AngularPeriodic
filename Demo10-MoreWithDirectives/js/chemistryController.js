@@ -5,6 +5,7 @@ chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$l
         $scope.fullElement = true;
 
         $scope.periodicElement = $scope.elements[0];
+        $scope.element2 =null;
         $scope.element = $scope.periodicElement;
         $log.info('type A:' + $scope.element.type);
         var selectEleType = $scope.element.type;
@@ -28,16 +29,30 @@ chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$l
         };
 
         $scope.getCssClassElement4 = function(selectedElement){
-            $log.info('getCssClassElement4: ');
-            $log.info('getCssClassElement4: '+  selectEleType + ' : ' +  selectedElement);
-            $scope.element = selectedElement;
-            $scope.cssForElement2 = chemistryService.getCssClassElement(selectedElement);
-            var cssClassName =chemistryService.getCssClassElement(selectedElement);
+                $log.info('getCssClassElement4: ');
+                $log.info('getCssClassElement4: '+  selectEleType + ' : ' +  selectedElement);
+                $scope.element = selectedElement;
+                $scope.cssForElement2 = chemistryService.getCssClassElement(selectedElement);
+                var cssClassName =chemistryService.getCssClassElement(selectedElement);
+                $scope.cssForElement =cssClassName;
+                //$scope.$apply();
+                return cssClassName;
+        };
+        $scope.getCssClassElement2 = function(){
+            var selectedElement = $scope.elements[58];
+            $scope.element2.name = selectedElement.name;
+            $scope.element2.atomicNumber = selectedElement.atomicNumber;
+            $log.info('ele2: ');
+            $log.info('type: '+  selectEleType + ' : ' +  $scope.periodicElement.name);
+            var cssClassName =chemistryService.getCssClassElement($scope.element.type);
             $scope.cssForElement =cssClassName;
             //$scope.$apply();
             return cssClassName;
         };
-        $scope.getCssClassElement2 = function(){
+        function getCssClassElement22() {
+            var selectedElement = $scope.elements[58];
+            $scope.element2.name = selectedElement.name;
+            $scope.element2.atomicNumber = selectedElement.atomicNumber;
             $log.info('ele2: ');
             $log.info('type: '+  selectEleType + ' : ' +  $scope.periodicElement.name);
             var cssClassName =chemistryService.getCssClassElement($scope.element.type);
