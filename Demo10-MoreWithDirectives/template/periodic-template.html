@@ -1,9 +1,9 @@
-<div class='periodicCell {{cssForElement2}}' data-ng-hide="fullElement"> XX{{jpcssForElement}}
-    <div class="atomicNumber">{{element2.atomicNumber}}</div><div class="atomicWeight">{{element.atomicWeight}}</div>
+<div class='periodicCell {{element.cssForDisplay}}' data-ng-hide="fullElement">
+    <div class="atomicNumber">{{element.atomicNumber}}</div><div class="atomicWeight">{{element.atomicWeight}}</div>
     <div class="atomicSymbol">{{element.symbol}}</div>
-    <div class="centerElementDisplay">{{element2.name }}</div>
+    <div class="centerElementDisplay">{{element.name }}</div>
 </div>
-<div class='periodicPop {{cssForElement}}'  data-ng-show="fullElement"> ZZ{{cssForElement}}
+<div class='periodicPop {{element.cssForDisplay}}'  data-ng-show="fullElement">
     <div class="atomicNumberPop">{{element.atomicNumber}}</div>
     <div class="atomicWeightPop">{{element.atomicWeight}}</div>
     <div class="atomicSymbolPop">{{element.symbol}}</div>
