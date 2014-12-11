@@ -1,6 +1,6 @@
 'use strict';
 
-var chemistryApp = angular.module('chemistryApp', ['ngRoute']).
+var chemistryApp = angular.module('chemistryApp', ['ngRoute','ui.bootstrap']);
     config(function($routeProvider) {
         $routeProvider
             .when('/', {

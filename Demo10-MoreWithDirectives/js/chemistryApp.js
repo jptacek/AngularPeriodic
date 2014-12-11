@@ -1,4 +1,4 @@
 'use strict';
 
-var chemistryApp = angular.module('chemistryApp', []);
+var chemistryApp = angular.module('chemistryApp', ['ui.bootstrap']);
 
