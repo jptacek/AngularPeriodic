@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html data-ng-app>
 <head>
-    <title>Sphere calculations</title>
+    <title>Temperature Conversion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/site.css"/>
 
 </head>
 <body>
 <div class="container">
-<b>Radius of Sphere</b>
-    <input type="number" data-ng-model="radius" value=0>
+    <b>Temperature (&degF)</b>
+    <input type="number" data-ng-model="tempF" value=0>
     <br/>
     <br/>
-    <b>Volume:</b> {{ (4*3.141*radius*radius*radius)/3 | number:3}} <br/>
-    <b>Surface area:</b> {{ (4*3.141*radius*radius) | number:3}} <br/>
+    <b>Celsius:</b> {{ ((5/9)*(tempF-32)) |number:2 }} &degC<br/>
+    <b>Kelvin:</b> {{ (((5/9)*(tempF-32))-273.0) |number:2 }} K
 </div>
 
 
