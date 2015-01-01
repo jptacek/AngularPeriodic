@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Elements - More With Directives</title>
+    <title>Elements - Animation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/chemistry.css"/>
@@ -9,7 +9,7 @@
 </head>
 <body data-ng-app="chemistryApp">
 <div class="container" data-ng-controller="chemistryController">
-    <h1>Periodic Elements - Directives</h1>
+    <h1>Periodic Elements - Animation</h1>
 
     <div class="row">
         <select ng-model="periodicElement" ng-options="e.name for e in elements"
@@ -42,9 +42,9 @@
 
 </div>
 
-<script type="text/javascript" src="../js/lib/angular.min.js"></script>
+<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="../js/lib/angular-route.min.js"></script>
-
+<script type="text/javascript" src="../bower_components/angular-animate/angular-animate.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/lib/ui-bootstrap-tpls-0.12.0.min.js"></script>
