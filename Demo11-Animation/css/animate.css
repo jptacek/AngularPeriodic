@@ -1,0 +1,25 @@
+.periodicCell-animation.ng-enter, .periodicCell-animation.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+}
+
+.periodicCell-animation.ng-enter {
+    opacity: 0;
+}
+
+
+.periodicCell-animation.ng-enter-active {
+    opacity: 0;
+}
+
+
+.periodicCell-animation.ng-leave {
+    opacity: 1;
+}
+
+
+.periodicCell-animation.ng-leave.ng-leave-active {
+    opacity: 0;
+}

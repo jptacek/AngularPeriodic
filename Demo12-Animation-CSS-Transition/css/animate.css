@@ -1,0 +1,144 @@
+.periodicCell-animation.ng-enter {
+    -webkit-animation: 0.5s repeat-animation-enter;
+    -moz-animation: 0.5s repeat-animation-enter;
+    -o-animation: 0.5s repeat-animation-enter;
+    animation: 0.5s repeat-animation-enter;
+}
+
+.periodicCell-animation.ng-leave {
+    -webkit-animation: 0.5s repeat-animation-leave;
+    -moz-animation: 0.5s repeat-animation-leave;
+    -o-animation: 0.5s repeat-animation-leave;
+    animation: 0.5s repeat-animation-leave;
+}
+
+
+.periodicCell-animation.ng-move {
+    -webkit-animation: 0.5s repeat-animation-move;
+    -moz-animation: 0.5s repeat-animation-move;
+    -o-animation: 0.5s repeat-animation-move;
+    animation: 0.5s repeat-animation-move;
+}
+
+@keyframes repeat-animation-enter {
+    from {
+        opacity:0;
+    }
+    to
+    {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes repeat-animation-enter {
+    from {
+        opacity:0;
+    }
+    to
+    {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes repeat-animation-enter {
+    from {
+        opacity:0;
+    }
+    to
+    {
+        opacity:1;
+    }
+}
+
+
+@-o-keyframes repeat-animation-enter {
+    from {
+        opacity:0;
+    }
+    to
+    {
+        opacity:1;
+    }
+}
+
+@keyframes repeat-animation-leave {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+
+
+@-webkit-keyframes repeat-animation-leave {
+    from {
+        opacity:1;
+    }
+    to
+    {
+        opacity:0;
+    }
+}
+
+
+@-moz-keyframes repeat-animation-leave {
+    from {
+        opacity:1;
+    }
+    to
+    {
+        opacity:0;
+    }
+}
+
+
+@-o-keyframes repeat-animation-leave {
+    from {
+        opacity:1;
+    }
+    to
+    {
+        opacity:0;
+    }
+}
+
+
+@keyframes repeat-animation-move {
+    from {
+        opacity:0.5;
+    }
+    to
+    {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes repeat-animation-move {
+    from {
+        opacity:0.5;
+    }
+    to
+    {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes repeat-animation-move {
+    from {
+        opacity:0.5;
+    }
+    to
+    {
+        opacity:1;
+    }
+}
+@-o-keyframes repeat-animation-move {
+    from {
+        opacity:0.5;
+    }
+    to
+    {
+        opacity:1;
+    }
+}
