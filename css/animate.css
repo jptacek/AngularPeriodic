@@ -1,0 +1,13 @@
+.periodicCell.ng-enter,
+.periodicCell.ng-leave {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+.periodicCell.ng-enter,
+.periodicCell.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+.periodicCell.ng-leave,
+.periodicCell.ng-enter.ng-enter-active {
+  opacity: 1;
+}

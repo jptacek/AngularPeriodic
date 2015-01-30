@@ -1,10 +1,10 @@
-<div class='periodicCell {{element.cssForDisplay}} periodicCell-animation'
-     data-ng-if="!fullElement">
+<div class='periodicCell {{element.cssForDisplay}}  periodicCell-animation'
+     data-ng-show="!fullElement">
     <div class="atomicNumber">{{element.atomicNumber}}</div><div class="atomicWeight">{{element.atomicWeight}}</div>
     <div class="atomicSymbol">{{element.symbol}}</div>
     <div class="centerElementDisplay">{{element.name }}</div>
 </div>
-<div class='periodicPop {{element.cssForDisplay}} periodicCell-animation'  data-ng-if="fullElement">
+<div class='periodicPop {{element.cssForDisplay}} periodicCell-animation'  data-ng-show="fullElement">
     <div class="atomicNumberPop">{{element.atomicNumber}}</div>
     <div class="atomicWeightPop">{{element.atomicWeight}}</div>
     <div class="atomicSymbolPop">{{element.symbol}}</div>
