@@ -1,0 +1,17 @@
+<div class='periodicCell {{element.cssForDisplay}}' data-ng-hide="fullElement">
+    <div class="atomicNumber">{{element.atomicNumber}}</div><div class="atomicWeight">{{element.atomicWeight}}</div>
+    <div class="atomicSymbol">{{element.symbol}}</div>
+    <div class="centerElementDisplay">{{element.name }}</div>
+</div>
+<div class='periodicPop {{element.cssForDisplay}}'  data-ng-show="fullElement">
+    <div class="atomicNumberPop">{{element.atomicNumber}}</div>
+    <div class="atomicWeightPop">{{element.atomicWeight}}</div>
+    <div class="atomicSymbolPop">{{element.symbol}}</div>
+    <div class="density">{{element.density || '-'}}</div>
+    <div class="meltingPoint">{{element.melting + 273.15|number:2}}</div>
+    <div class="boilingPoint">{{element.boiling + 273.15|number:2}}</div>
+    <div class="elecConfig">{{element.elecconfig }}</div>
+    <div class="elctroNeg">{{element.electronegativity}}</div>
+    <div class="centerElementDisplayPop">{{element.name }}</div>
+
+</div>

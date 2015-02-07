@@ -1,4 +1,12 @@
-chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$log',
+(function() {
+    'use strict';
+
+    angular
+        .module('chemistryApp')
+        .controller('chemistryController',chemistryController);
+
+    chemistryController.$inject =  ['$scope', 'chemistryService','$log'];
+
     function chemistryController($scope,  chemistryService,$log) {
 
         $scope.elements = chemistryService.getElements();
@@ -20,5 +28,6 @@ chemistryApp.controller('chemistryController', ['$scope', 'chemistryService','$l
         };
 
 
-    }]
-);
+    }
+
+})();

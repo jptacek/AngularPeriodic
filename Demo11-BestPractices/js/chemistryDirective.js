@@ -1,4 +1,13 @@
-chemistryApp.directive('periodicChartElement', function (chemistryService) {;
+(function() {
+    'use strict';
+
+    angular
+        .module('chemistryApp')
+        .directive('periodicChartElement',periodicChartElement);
+
+    periodicChartElement.$inject= ['chemistryService'];
+
+    function periodicChartElement (chemistryService) {
     return {
         restrict: 'E',
         templateUrl: './template/periodic-template.html',
@@ -20,5 +29,5 @@ chemistryApp.directive('periodicChartElement', function (chemistryService) {;
         }
 
     }
-
-});
+    }
+})();
