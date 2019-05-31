@@ -1,82 +1,128 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Elements - Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
-</head>
-<body ng-app="chemistryApp">
-<form name="submitForm" class="form-horizontal" data-ng-controller="chemServiceCtrl">
-    <div class="container">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <base href="/Demo08-Services/" />
+  </head>
+  <body ng-app="chemistryApp">
+    <form
+      name="submitForm"
+      class="form-horizontal"
+      data-ng-controller="chemServiceCtrl"
+    >
+      <div class="container">
         <h1>Periodic Elements - Servcies</h1>
-           <div class="row">
-            <div class="col-md-12 ">
-                <div class="row">
-                    <div class="col-md-12">
-                       Select two elements to calculate the type of bond they form based on their electronegativity.
-                    </div>
-                </div>
-                <div class="row" style="margin-top:14px;">
-                    <div class="col-md-12">
-                        The types of bonds possible are as follows:
-                        <ul>
-                            <li>Ionic Bond - one atom takes the electron from the other atom in the bond</li>
-                            <li>Polar Covalent Bond - the electron is shared, but spends most of its time near the atom with higher electronegativity</li>
-                            <li>Covalent Bond - the electrong is shared between both atoms equally</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="form-group" style="margin-top:14px;">
-                    <div class="control-label col-md-2">
-                        Element 1:
-                    </div>
-                    <div class="col-md-4">
-                        <select class="form-control" data-ng-model="selectedElement1" data-ng-options="e.name for e in elements | orderBy:['name']" data-ng-change="calculateBondPolarity()"></select>
-                    </div>
-                    <div class="control-label col-md-2">
-                        Element 2:
-                    </div>
-                    <div class="col-md-4">
-                        <select class="form-control" data-ng-model="selectedElement2" data-ng-options="e.name for e in elements  | orderBy:['name']" data-ng-change="calculateBondPolarity()"></select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6" style="text-align:center;" data-ng-show="selectedElement1">
-                        You have selected:<br />
-                        <strong>{{selectedElement1.name}}</strong><br />
-                        Electronegativity:<br />
-                        <strong>{{selectedElement1.electronegativity}}</strong>
-                    </div>
-                    <div class="col-md-6" style="text-align:center;" data-ng-show="selectedElement2">
-                        You have selected:<br />
-                        <strong>{{selectedElement2.name}}</strong><br />
-                        Electronegativity:<br />
-                        <strong>{{selectedElement2.electronegativity}}</strong>
-                    </div>
-                </div>
+        <div class="row">
+          <div class="col-md-12 ">
+            <div class="row">
+              <div class="col-md-12">
+                Select two elements to calculate the type of bond they form
+                based on their electronegativity.
+              </div>
             </div>
-        </div>
-        <div class="row rounded-group-box" data-ng-show="selectedElement1 && selectedElement2">
-            <div class="col-md-12" style="text-align:center;">
-                <strong>{{selectedElement1.name}}</strong> + <strong>{{selectedElement2.name}}</strong> = <strong>{{currentBondType}}</strong><br /><br />
-                <small>With a electronegativity difference of {{currentBondDifference | number:2}} {{selectedElement1.name}} and {{selectedElement2.name}} would form a {{currentBondType}}</small>
+            <div class="row" style="margin-top:14px;">
+              <div class="col-md-12">
+                The types of bonds possible are as follows:
+                <ul>
+                  <li>
+                    Ionic Bond - one atom takes the electron from the other atom
+                    in the bond
+                  </li>
+                  <li>
+                    Polar Covalent Bond - the electron is shared, but spends
+                    most of its time near the atom with higher electronegativity
+                  </li>
+                  <li>
+                    Covalent Bond - the electrong is shared between both atoms
+                    equally
+                  </li>
+                </ul>
+              </div>
             </div>
+            <div class="form-group" style="margin-top:14px;">
+              <div class="control-label col-md-2">
+                Element 1:
+              </div>
+              <div class="col-md-4">
+                <select
+                  class="form-control"
+                  data-ng-model="selectedElement1"
+                  data-ng-options="e.name for e in elements | orderBy:['name']"
+                  data-ng-change="calculateBondPolarity()"
+                ></select>
+              </div>
+              <div class="control-label col-md-2">
+                Element 2:
+              </div>
+              <div class="col-md-4">
+                <select
+                  class="form-control"
+                  data-ng-model="selectedElement2"
+                  data-ng-options="e.name for e in elements  | orderBy:['name']"
+                  data-ng-change="calculateBondPolarity()"
+                ></select>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col-md-6"
+                style="text-align:center;"
+                data-ng-show="selectedElement1"
+              >
+                You have selected:<br />
+                <strong>{{ selectedElement1.name }}</strong
+                ><br />
+                Electronegativity:<br />
+                <strong>{{ selectedElement1.electronegativity }}</strong>
+              </div>
+              <div
+                class="col-md-6"
+                style="text-align:center;"
+                data-ng-show="selectedElement2"
+              >
+                You have selected:<br />
+                <strong>{{ selectedElement2.name }}</strong
+                ><br />
+                Electronegativity:<br />
+                <strong>{{ selectedElement2.electronegativity }}</strong>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</form>
+        <div
+          class="row rounded-group-box"
+          data-ng-show="selectedElement1 && selectedElement2"
+        >
+          <div class="col-md-12" style="text-align:center;">
+            <strong>{{ selectedElement1.name }}</strong> +
+            <strong>{{ selectedElement2.name }}</strong> =
+            <strong>{{ currentBondType }}</strong
+            ><br /><br />
+            <small
+              >With a electronegativity difference of
+              {{ currentBondDifference | number: 2 }}
+              {{ selectedElement1.name }} and {{ selectedElement2.name }} would
+              form a {{ currentBondType }}</small
+            >
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="../js/lib/angular.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../js/lib/angular-route.min.js"
+    ></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/lib/ui-bootstrap-tpls-0.12.0.min.js"></script>
 
-<script type="text/javascript" src="../js/lib/angular.min.js"></script>
-<script type="text/javascript" src="../js/lib/angular-route.min.js"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../js/lib/ui-bootstrap-tpls-0.12.0.min.js"></script>
-
-<script type="text/javascript" src="js/chemistryApp.js"></script>
-<script type="text/javascript" src="js/chemistryController.js"></script>
-<script type="text/javascript" src="js/chemistryService.js"></script>
-<script type="text/javascript" src="js/chemistry.js"></script>
-
-</body>
-<!-- http://www.tutor-homework.com/Chemistry_Help/electronegativity_table/electronegativity.html -->
+    <script type="text/javascript" src="js/chemistry.js"></script>
+    <script type="text/javascript" src="js/chemistryApp.js"></script>
+    <script type="text/javascript" src="js/chemistryController.js"></script>
+    <script type="text/javascript" src="js/chemistryService.js"></script>
+  </body>
+  <!-- http://www.tutor-homework.com/Chemistry_Help/electronegativity_table/electronegativity.html -->
 </html>

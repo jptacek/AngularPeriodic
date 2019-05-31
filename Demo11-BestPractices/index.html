@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Elements - More With Directives</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../css/chemistry.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/chemistry.css" />
+    <base href="/Demo11-BestPractices/" />
+  </head>
+  <body data-ng-app="chemistryApp">
+    <div class="container" data-ng-controller="chemistryController">
+      <h1>Periodic Elements - Directives</h1>
 
-</head>
-<body data-ng-app="chemistryApp">
-<div class="container" data-ng-controller="chemistryController">
-    <h1>Periodic Elements - Directives</h1>
-
-    <div class="row">
-        <select ng-model="periodicElement" ng-options="e.name for e in elements"
-                ng-click="updateController(periodicElement)"></select><br/>
-    </div>
-    <div class="row">
+      <div class="row">
+        <select
+          ng-model="periodicElement"
+          ng-options="e.name for e in elements"
+          ng-click="updateController(periodicElement)"
+        ></select
+        ><br />
+      </div>
+      <div class="row">
         &nbsp;
-    </div>
-    <div class="row">
+      </div>
+      <div class="row">
         &nbsp;
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <periodic-chart-element
+            element="periodicElement"
+          ></periodic-chart-element>
+        </div>
+        <div class="col-md-2">
+          &nbsp;
+        </div>
+        <div class="col-md-2">
+          <periodic-chart-element
+            element="elements[periodicElement.atomicNumber]"
+          ></periodic-chart-element>
+        </div>
+        <div class="col-md-2">
+          &nbsp;
+        </div>
+        <div class="col-md-2">
+          <periodic-chart-element
+            element="elements[periodicElement.atomicNumber+1]"
+          ></periodic-chart-element>
+        </div>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-2">
-            <periodic-chart-element element="periodicElement" ></periodic-chart-element>
-        </div>
-        <div class="col-md-2">
-            &nbsp;
-        </div>
-        <div class="col-md-2">
-            <periodic-chart-element element="elements[periodicElement.atomicNumber]"  ></periodic-chart-element>
-        </div>
-        <div class="col-md-2">
-            &nbsp;
-        </div>
-        <div class="col-md-2">
-            <periodic-chart-element element="elements[periodicElement.atomicNumber+1]"></periodic-chart-element>
-        </div>
 
-    </div>
+    <script type="text/javascript" src="../js/lib/angular.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../js/lib/angular-route.min.js"
+    ></script>
 
-</div>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/lib/ui-bootstrap-tpls-0.12.0.min.js"></script>
 
-<script type="text/javascript" src="../js/lib/angular.min.js"></script>
-<script type="text/javascript" src="../js/lib/angular-route.min.js"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../js/lib/ui-bootstrap-tpls-0.12.0.min.js"></script>
-
-<script type="text/javascript" src="js/chemistryApp.js"></script>
-<script type="text/javascript" src="js/chemistryController.js"></script>
-<script type="text/javascript" src="js/chemistryService.js"></script>
-<script type="text/javascript" src="js/chemistryDirective.js"></script>
-
-</body>
+    <script type="text/javascript" src="js/chemistryApp.js"></script>
+    <script type="text/javascript" src="js/chemistryController.js"></script>
+    <script type="text/javascript" src="js/chemistryService.js"></script>
+    <script type="text/javascript" src="js/chemistryDirective.js"></script>
+  </body>
 </html>
